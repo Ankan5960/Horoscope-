@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Daily Horoscope</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 Daily Horoscope 🌟</h1>
+        <form id="horoscopeForm">
+            <div class="mb-4">
+                <label for="username">Your Name:</label>
+                <input type="text" id="username" placeholder="Enter your name" required>
+            </div>
+
+            <div class="mb-4">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+            </div>
+
+            <div class="mb-4">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-4 ">
+                <label for="zodiacSign">Your Zodiac Sign:</label>
+                <select class="h-10" id="zodiacSign" required>
+                    <option value="">-- Select your Zodiac Sign --</option>
+                    <option value="Aries">Aries (Mar 21 - Apr 19)</option>
+                    <option value="Taurus">Taurus (Apr 20 - May 20)</option>
+                    <option value="Gemini">Gemini (May 21 - Jun 20)</option>
+                    <option value="Cancer">Cancer (Jun 21 - Jul 22)</option>
+                    <option value="Leo">Leo (Jul 23 - Aug 22)</option>
+                    <option value="Virgo">Virgo (Aug 23 - Sep 22)</option>
+                    <option value="Libra">Libra (Sep 23 - Oct 22)</option>
+                    <option value="Scorpio">Scorpio (Oct 23 - Nov 21)</option>
+                    <option value="Sagittarius">Sagittarius (Nov 22 - Dec 21)</option>
+                    <option value="Capricorn">Capricorn (Dec 22 - Jan 19)</option>
+                    <option value="Aquarius">Aquarius (Jan 20 - Feb 18)</option>
+                    <option value="Pisces">Pisces (Feb 19 - Mar 20)</option>
+                </select>
+            </div>
+
+            <div class="mb-6">
+                <label>Horoscope for:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="dayType" value="yesterday" required> Yesterday
+                    </label>
+                    <label>
+                        <input type="radio" name="dayType" value="today"> Today
+                    </label>
+                    <label>
+                        <input type="radio" name="dayType" value="tomorrow"> Tomorrow
+                    </label>
+                </div>
+            </div>
+
+            <button class="h-10" type="submit">Get My Horoscope</button>
+        </form>
+
+        <div id="horoscopeResult" class="hidden">
+            <!-- Horoscope result will be displayed here -->
+            Enter your details and click 'Get My Horoscope' to see your reading!
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
